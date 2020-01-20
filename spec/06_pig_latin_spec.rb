@@ -1,6 +1,6 @@
 require_relative '../lib/06_pig_latin'
 
-describe "#translate" do
+describe "translate" do
 
   it "translates a word beginning with a vowel" do
     s = translate("apple")
@@ -49,5 +49,10 @@ describe "#translate" do
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
   # * retain the punctuation from the original phrase
+
+  # it "keeps case" do
+  #   s = translate("The Quick Brown Fox")
+  #   expect(s).to eq("Ethay Ickquay Ownbray Oxfay")
+  # end
 
 end
