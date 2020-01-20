@@ -19,6 +19,7 @@ def first_word(str)
 end
 
 def titleize(str)
-    smallwords = ["and","or","the","in"]
-    return str.scan(/[\w',.]+/).each {|x| if !smallwords.include?(x) then x.capitalize! end}.join(' ')
+    smallwords = ["the","or","and","in"]
+    arr=str.split
+    return arr.each{|x| if !smallwords.include?(x.downcase) then x.capitalize! elsif arr.index(x)==0 then x.capitalize! end}.join(" ")
 end
